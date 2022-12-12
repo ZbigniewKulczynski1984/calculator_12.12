@@ -1,0 +1,12 @@
+*, *::after, *::before {
+    box-sizing: border-box;
+    font-size: 23px;
+    font-weight: 400;
+    color: white;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    background: #888f96;
+}
