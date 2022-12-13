@@ -36,3 +36,28 @@ equality.addEventListener('click', () => {
     calculator.clearResult();
     calculator.updateResult();
   })
+
+  class Calculator {
+    constructor(previousResult, currentResult) {
+      this.previousResult = previousResult
+      this.currentResult = currentResult
+      this.clearResult()
+    }
+    clearResult = () => {
+      this.currentOperation = "";
+      this.operation = undefined;
+      this.previousOperation = "";
+    }
+  
+    addNumber = (number) => {
+        if (number === "•") {
+          if (this.currentOperation.includes(".")) {
+            return;
+          }
+    
+          number = ".";
+        }
+        this.currentOperation = this.currentOperation.toString() + number.toString();
+      };
+
+      
