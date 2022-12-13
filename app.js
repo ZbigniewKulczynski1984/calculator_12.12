@@ -60,4 +60,25 @@ equality.addEventListener('click', () => {
         this.currentOperation = this.currentOperation.toString() + number.toString();
       };
 
-      
+      chooseOperation(operation) {
+        if (this.currentOperand === '') return
+        if (this.previousOperand !== '') {
+          this.calculate()
+        }
+        this.operation = operation
+        this.previousOperation = this.currentOperation
+        this.currentOperation = ''
+      }
+
+      calculate = () => {
+        let calc
+        if (!this.previousOperation || !this.currentOperation) {
+          return
+        }
+        const previous = parseFloat(this.previousOperation);
+        const current = parseFloat(this.currentOperation);
+    
+        if (isNaN(previous) || isNaN(current)) {
+          return
+        }
+    
