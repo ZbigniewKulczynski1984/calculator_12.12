@@ -21,3 +21,18 @@ operators.forEach((operator) => {
 		calculator.updateResult();
 	});
 });
+
+equality.addEventListener('click', () => {
+    calculator.calculate();
+    calculator.updateResult();
+  })
+  
+  remove.addEventListener('click', () => {
+    calculator.deleteNumber();
+    calculator.updateResult();
+  })
+  
+  clear.addEventListener('click', () => {
+    calculator.clearResult();
+    calculator.updateResult();
+  })
